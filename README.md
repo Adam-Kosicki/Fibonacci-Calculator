@@ -1,2 +1,4 @@
 # Multithreaded-Fibonacci-Calculator-using-Parallelism-
-Calculates Fibonacci numbers using multithreading in C. Each thread computes a Fibonacci number, utilizing parallelism for faster results.
+This C code implements a parallel Fibonacci number calculator using threads. The main function takes an integer input "n" as a command-line argument and creates a thread to calculate the Fibonacci of "n". The fib_thread function is recursively invoked to calculate Fibonacci numbers. If the input "n" is less than 2, the function returns "n". Otherwise, it creates two threads to calculate the Fibonacci of "n-1" and "n-2". It waits for these threads to complete using pthread_join, computes the result, and returns it.
+
+The code demonstrates the concept of multithreading by creating threads to calculate Fibonacci numbers in parallel. The thread count is tracked, showcasing the concurrent nature of the computation. It showcases how threading can be used to enhance the performance of recursive algorithms like Fibonacci calculations. The resulting Fibonacci number for the given input "n" is printed along with the total thread count used in the calculation.
